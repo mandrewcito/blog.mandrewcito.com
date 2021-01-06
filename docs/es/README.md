@@ -6,7 +6,7 @@ tagline: puppy dev doing things
 actionText: Get Started →
 actionLink: /guide/
 features:
-- title: Simplicity First EN EN 
+- title: Simplicity First ES ES ES ES ES
   details: Minimal setup with markdown-centered project structure helps you focus on writing.
 - title: Vue-Powered
   details: Enjoy the dev experience of Vue + webpack, use Vue components in markdown, and develop custom themes with Vue.
