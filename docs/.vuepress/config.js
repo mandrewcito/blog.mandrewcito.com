@@ -1,26 +1,40 @@
-const jsFrameworkItems = [
-  { text: 'Vue', link: 'javascript/vue/', items: [] },
-  { text: 'React', link: 'javascript/react/' }
+const jsItems = [
+  { text: 'Frameworks', items: [{text: 'Vue', link: 'javascript/vue/'}, { text: 'React', link: 'javascript/react/' }] },
 ];
+
+const pyItems = [
+  { text: 'Frameworks', items: [{text: 'flask', link: 'python/flask/'}] },
+];
+
+const aspnetLink = {
+  text: 'ASP.Net',
+  items: [
+    { text: 'Libraries', items: [] },
+    { text: 'SignalR', items: [] },
+  ]
+};
+
+const javascriptLink = { text: 'Javascript', link: 'javascript/', items: jsItems };
+const pythonLink = { text: 'Python', link: 'python/', items: pyItems };
 
 module.exports = {
   locales: {
     // The key is the path for the locale to be nested under.
     // As a special case, the default locale can use '/' as its path.
     '/': {
-      lang: 'en-US', // this will be set as the lang attribute on <html>
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
+      lang: 'gl-ES', // this will be set as the lang attribute on <html>
+      title: 'mandrewcito',
+      description: 'Blog no que mandrewcito fai as súas trapalladas'
     },
     '/es/': {
       lang: 'es-ES',
-      title: 'VuePressES',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'mandrewcito',
+      description: 'Blog de mandrewcito'
     },
-    '/gl/': {
-      lang: 'gl-ES',
-      title: 'VuePressGL',
-      description: 'Vue 驱动的静态网站生成器'
+    '/en/': {
+      lang: 'en-US',
+      title: 'mandrewcito',
+      description: 'mandrewcito\'s blog'
     }
   },
   themeConfig: {
@@ -28,41 +42,46 @@ module.exports = {
     navbar: true,
     locales: {
       '/': {
-        lang: 'en-US', // this will be set as the lang attribute on <html>
-        title: 'VuePress',
-        selectText: 'Languages',
-        label: 'English',
-        ariaLabel: 'Languages',
-        algolia: {},
-        description: 'Vue-powered Static Site Generator',
-        nav: [
-          { text: 'Home', link: '/' },
-          { text: 'Javascript', link: '/javascript/', items: jsFrameworkItems }
-        ]
-      },
-      '/gl/': {
         lang: 'gl-ES', // this will be set as the lang attribute on <html>
-        title: 'VuePress',
+        title: 'mandrewcito - galego',
         selectText: 'Languages',
         label: 'Galego',
+        ariaLabel: 'Languages',
         algolia: {},
-        description: 'Vue-powered Static Site Generator',
+        description: 'Blog no que mandrewcito fai as súas trapalladas',
         nav: [
-          { text: 'HomeGL', link: '/' },
-          { text: 'Javascript', link: '/javascript/', items: jsFrameworkItems }
-
+          { text: 'Inicio', link: '/' },
+          aspnetLink,
+          javascriptLink,
+          pythonLink
+        ]
+      },
+      '/en/': {
+        lang: 'en-US', 
+        title: 'mandrewcito - english',
+        selectText: 'Languages',
+        label: 'English',
+        algolia: {},
+        description: 'Blog de ',
+        nav: [
+          { text: 'Home', link: '/en/' },
+          aspnetLink,
+          javascriptLink,
+          pythonLink
         ]
       },
       '/es/': {
-        lang: 'es-ES', // this will be set as the lang attribute on <html>
-        title: 'VuePress',
+        lang: 'es-ES',
+        title: 'mandrewcito - español',
         selectText: 'Languages',
         label: 'Español',
         algolia: {},
-        description: 'Vue-powered Static Site Generator',
+        description: 'Blog de mandrewcito',
         nav: [
-          { text: 'casa', link: '/' },
-          { text: 'Javascript', link: '/javascript/', items: jsFrameworkItems }
+          { text: 'Inicio', link: '/es/' },
+          aspnetLink,
+          javascriptLink,
+          pythonLink
         ]
       }
     }
