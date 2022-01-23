@@ -1,7 +1,9 @@
-name: Flex
+name: blog.mandrewcito.com
 markdown: kramdown
 highlighter: pygments
 exclude: ["LICENSE.txt", "README.md"]
+site:
+  name: blog.mandrewcito.com
 
 baseurl: ""
 permalink: /:title/
