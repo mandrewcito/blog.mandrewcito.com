@@ -48,8 +48,6 @@ source 'https://rubygems.org'
 #######################################
 # test
 #######################################
-group :test do
-  gem "jekyll-paginate"
-  gem "redcarpet"
-  gem "jekyll-multiple-languages-plugin"
-end
+gem "jekyll-paginate"
+gem "redcarpet"
+gem "jekyll-multiple-languages-plugin"
