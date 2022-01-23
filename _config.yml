@@ -1,7 +1,7 @@
 name: blog.mandrewcito.com
 markdown: kramdown
 highlighter: pygments
-exclude: ["LICENSE.txt", "README.md"]
+exclude: ["LICENSE.txt", "README.md", "Makefile"]
 site:
   name: blog.mandrewcito.com
 
