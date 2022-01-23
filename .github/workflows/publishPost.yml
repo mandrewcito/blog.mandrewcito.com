@@ -1,0 +1,14 @@
+# This is a basic workflow to help you get started with Actions
+
+name: PublishDevTo
+
+on:
+    push:
+      branches:
+        - main
+      paths:
+        - '_i18n/_posts/**.md'
+
+jobs:
+  update-insert-post:
+    runs-on: ubuntu-latest
