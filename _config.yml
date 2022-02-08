@@ -8,6 +8,8 @@ site:
 baseurl: ""
 permalink: /:title/
 
+repository:  mandrewcito/blog.mandrewcito.com
+author: Andrés Baamonde Lozano
 
 # Paginate
 paginate: 1
