@@ -27,4 +27,3 @@ languages: ["gl", "en", "es"]
 
 exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
 
-theme: jekyll-theme-minimal
