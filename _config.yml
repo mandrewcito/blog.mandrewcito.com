@@ -19,11 +19,8 @@ paginate_path: "/pagination/page:num/"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
+  - jekyll-multiple-languages-plugin
   - jekyll-feed
-  - jemoji
-  - jekyll-include-cache
-
 
 # jekyll-multiple-languages-plugin settings:
 languages: ["gl", "en", "es"]
