@@ -2,13 +2,13 @@
 
 name: PublishDevTo
 
-on:
-    push:
-      branches:
-        - main
-      paths:
-        - '_i18n/_posts/**.md'
-
-jobs:
-  update-insert-post:
-    runs-on: ubuntu-latest
+#on:
+#    push:
+#      branches:
+#        - main
+#      paths:
+#        - '_i18n/_posts/**.md'
+#
+#jobs:
+#  update-insert-post:
+#    runs-on: ubuntu-latest
