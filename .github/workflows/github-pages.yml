@@ -1,21 +1,31 @@
-name: Build and deploy Jekyll site to GitHub Pages
+# Build Jekyll and Deploy to Github Pages
+name: Jekyll site CI
 
 on:
+  workflow_dispatch:
   push:
-    branches:
-      - main # or master before October 2020
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  github-pages:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+    - uses: actions/checkout@v2
+
+    # Build
+    - name: 👷 Build the site in the jekyll container 
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll \
+        -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll &&\
+        jekyll build --future -d build"
+    
+    # Deploy to gh-pages branch
+    - name: 🚀 Deploy to Github Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@v2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        branch: gh-pages # The branch the action should deploy to.
+        folder: build # The folder the action should deploy.
