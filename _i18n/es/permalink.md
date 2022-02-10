@@ -1,3 +1,3 @@
 ### Permalink
-Esta página utiliza links localizados y parmalinks personalizados!
+Questa pagina utilizza i link localizzate e permalink personalizzati!
 

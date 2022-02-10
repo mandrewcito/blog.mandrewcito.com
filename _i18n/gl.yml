@@ -1,14 +1,14 @@
 global:
-  tagline: Italiano
-  about: Riquardo
+  tagline: Tags
+  about: Sobre min
   twitter: Twitter
   github: GitHub
 langs:
-  gl: Italiano
-  en: English
+  gl: Galego
+  en: Inglés
   es: Español
 pages:
-  example: Esempio
-  includeexample: Il testo che segue è un parametro di Jekyll include liquid tag
+  example: Exemplo
+  includeexample: include liques
 titles:
-  pagination: Paginatura
+  pagination: Paxinas

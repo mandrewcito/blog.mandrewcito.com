@@ -1,8 +1,8 @@
-name: blog.mandrewcito.com
+name: blog @ mandrewcito
 markdown: kramdown
-highlighter: pygments
-exclude: ["LICENSE.txt", "README.md", "Makefile"]
-page.title: blog.mandrewcito.com
+highlighter: rouge
+exclude: ["LICENSE.txt", "README.md", "Makefile", "Gemfile", "Gemfile.lock"]
+site.title: blog @ mandrewcito
 
 baseurl: ""
 permalink: /:title/
@@ -19,14 +19,13 @@ paginate_path: "/pagination/page:num/"
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-multiple-languages-plugin
+  - jekyll-gist
   - jekyll-feed
-
+  - jemoji
+  - jekyll-include-cache
+  - jekyll-remote-theme
+  
 # jekyll-multiple-languages-plugin settings:
 languages: ["gl", "en", "es"]
 
 exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico"]
-
-gems: ["kramdown-parser-gfm", "rouge", "nokogiri", "jekyll-feed", "jekyll-paginate", "jekyll-multiple-languages-plugin", "jekyll-sitemap"]
-
-

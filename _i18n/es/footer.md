@@ -1,2 +1,2 @@
 ### Footer
-Se trata de un pie de página traducida!
+Questo è un footer tradotto!
